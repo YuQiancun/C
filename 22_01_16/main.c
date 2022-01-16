@@ -1,13 +1,25 @@
-﻿#define CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS 10
 #include <stdio.h>
+#include <string.h>
 
-int sum()
+
+//  枚举变量
+enum Sex
 {
- 	printf("请输入数字！\n");
-	int a = 0, b = 0;
-	scanf_s("%d%d",&a,&b);
-	return a + b;
-}
+	MALE = 1,
+	FEMALE = 2,
+	SECRET = 3
+} sex;
+
+//int sum()
+//{
+// 	printf("请输入数字！\n");
+//	int a = 12, b = 22;
+//	//scanf_s("%d%d",&a,&b);
+//	return a + b;
+//}
+
+#define MAX_NUM 20
 
 int main()
 {
@@ -24,14 +36,97 @@ int main()
 	//printf("%d\n", sizeof(float));
 	//printf("%d\n", sizeof(double));
 
-	int result = 0;
-	result = sum();
+	//int result = 0;
+	//result = sum();
 	//printf("%d\n\n", age);
 	//printf("%c\n\n", str);
 	//printf("%lf\n\n", fl);
-	printf("result %d\n\n", result);
+	//printf("result %d\n\n", result);
 
-	return 0;
+	/*int arr[MAX_NUM] = { 10 };
+	printf("%d , %d\n\n", arr[1], MAX_NUM);
+	
+	printf("MALE %d \n", MALE);
+	printf("FEMALE %d \n", FEMALE);
+	printf("SECRET %d \n", SECRET);
+
+
+	for (sex = MALE; sex <= SECRET;sex++) {
+		printf("sex枚举元素 %d \n\n", sex);
+	}*/
+	
+
+	// 字符串末尾默认隐藏\0  没有\0会出错
+	//char arr[] = "Hello";
+	//char arr1[] = {'A', 'b', 'c', '\0'};
+	//char arr2[] = {'A', 'b', 'c'};
+
+	//printf("arr % s \n\n", arr);
+	//printf("arr1 % s \n\n", arr1);
+	//printf("arr2 % s \n\n", arr2);
+
+	//int a1 = strlen(arr);
+	//int a2 = strlen(arr1);
+	//int a3 = strlen(arr2);
+	//printf("strlen(arr) %d \n\n", a1);
+	//printf("strlen(arr1) %d \n\n", a2);
+	//printf("strlen(arr2) %d \n\n", a3);
+
+
+
+
+
+	// 转义字符
+	//printf("D:\\test\\A.txt\n\n");
+	//printf("D:\test\A.txt\n\n");
+	//printf("AB\\nCD\n\n");
+	//printf("(are you ok??) ] \n\n");
+	/*printf("%s", );*/
+
+	// 触发电脑提示 蜂鸣
+	//printf("\a");
+
+
+	//printf("%c\n\n",  '\x32');
+	//printf("%d\n\n",  strlen("D:\test\t.txt"))
+
+	/*
+	int t = 0;
+	do {
+		printf("输入1会好好学习，0不想学习 \n");
+		int a = 0;
+		scanf_s("%d", &a);
+		if (a > 0) {
+			t++;
+			printf("我会好好学习！ 分数：%d\n", t);
+		}
+		else {
+			t--;
+			printf("我只想卖地瓜！ 分数：%d\n", t);
+		}
+	} while (t < 10);
+	printf("T的最终分数！ 分数：%d\n", t);
+
+	for (int i = 0; i < t; i++) {
+		printf("循环第 %d 遍,我的分数是%d\n", i + 1, t);
+	}
+	*/
+
+	/*
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	char str[5] = "AB";
+	printf("%d \n", arr[1]);
+	printf("521 %d \n", 521 >> 2);
+	*/
+
+	/*
+	char a[] = "hello";
+	int b = 43;
+	printf("%d \n", sizeof a);
+	printf("%d \n", sizeof b);
+	*/
+
+	return 999;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
