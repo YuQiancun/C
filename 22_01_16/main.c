@@ -1,8 +1,9 @@
-﻿#define _CRT_SECURE_NO_WARNINGS 10
+﻿#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
-
+/*
 //  枚举变量
 enum Sex
 {
@@ -10,6 +11,7 @@ enum Sex
 	FEMALE = 2,
 	SECRET = 3
 } sex;
+*/
 
 //int sum()
 //{
@@ -18,11 +20,18 @@ enum Sex
 //	//scanf_s("%d%d",&a,&b);
 //	return a + b;
 //}
-
+/*
 #define MAX_NUM 20
 
-int main()
-{
+extern int add(int, int);
+
+// 定义宏 function = { 执行语句 }   调用 = function NAME = { 执行语句 }
+#define sum(int x,int y) ((x) + (y))
+*/
+
+
+//int main()
+//{
 	//char str = "H";
 	//int age = 24;
 	//float fl = 24.23;
@@ -126,9 +135,159 @@ int main()
 	printf("%d \n", sizeof b);
 	*/
 
-	return 999;
+
+	//printf("%d\n\n", add(10, 11));
+
+//	return 999;
+//}
+
+/*
+
+int main()
+{
+	int a = 10;
+	printf("%p\n\n", &a);
+	int* p = &a;
+
+	printf("*p %d\n\n", *p);
+	++a;
+	printf("*p %d  %d\n\n", *p, a);
+
+	--*p;
+
+	printf("%d  %d\n\n", *p, a);
+
+
+	return 0;
 }
 
+*/
+void game(int a, int b) {
+	if (a > b)
+		printf("太大了\n");
+	if (a < b)
+		printf("太小了\n");
+	if(a == b)
+		printf("恭喜刚刚好！\n");
+}
+
+int main(void)
+{
+	/*
+	char password[20] = { 0 };
+	printf("%s\n", password);
+	printf("请输入密码 Enter 确认！\n\n");
+	scanf("%s", password);
+	printf("再次确认密码 Y/N 确认！\n\n");
+	//getchar();
+	int ch = getchar();
+
+	if (ch == 'Y') {
+		printf("成功确认密码！");
+	}else {
+		printf("我要重新设置密码");
+	}
+	*/
+
+	/*
+	char password[20] = { 0 };
+	printf("请输入密码 Enter 确认！\n\n");
+	scanf("%s", password);
+	int temp = 0;
+	while ((temp = getchar()) != '\n')
+	{
+		printf("%d", temp);
+	}
+
+	int ch = getchar();
+	printf("End In! %d", ch);
+	*/
+
+
+	/*
+	printf("0 %d\n\n", '0');
+	printf("5 %d\n\n", '5');
+	printf("9 %d\n\n", '9');
+	if ('9' > 54) {
+		printf("'9' > 54   %d\n", '9');
+	}
+	*/
+
+	/*
+	int ch = 0;
+	while ((ch = getchar()) != EOF) {
+		if (ch < '0' || ch > '9') {
+			printf("%d", ch);
+			//continue;
+			break;
+		}
+		putchar(ch);
+	}*/
+
+	/*
+	long long factorial = 1;
+	for (int i = 1; i < 10; i++)
+	{
+		factorial *= i;
+	}
+	printf("factorial %lld\n", factorial);
+	*/
+
+	/*
+	long sum = 0;
+	long t = 1;
+	for (int i = 1; i <= 10; i++)
+	{
+		
+		t = 1;
+		for (int j = 1; j <= i; j++)
+		{
+			t *= j;
+		}
+		
+		t *= i;
+		sum += t;
+	}
+	printf("sum %ld\n", sum);
+
+	*/
+	/*
+
+	char arr1[] = "Welcome HangZhou!";
+	char arr2[] = "#################";
+
+	int left = 0;
+	int right = strlen(arr2) - 1;
+
+	while (1) {
+		arr2[left] = arr1[left];
+		arr2[right] = arr1[right];
+		system("cls");
+		printf("%s", arr2);
+		Sleep(500);
+		left++; right--;
+		if (left > right)
+			break;
+	}
+	*/
+
+	int state = 0;
+	int ra = rand(100);
+	printf("#####################\n");
+	printf("1.pay		   0.exit\n");
+	printf("#####################\n");
+	do{
+		scanf("%d", &state);
+		if (state == 0)
+			break;
+		else
+			game(state, ra);
+	} while (state);
+
+	printf("已退出游戏");
+
+	return 0;
+}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
