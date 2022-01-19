@@ -271,7 +271,7 @@ int main(void)
 	}
 	*/
 
-	int state = 0;
+	/*int state = 0;
 	int ra = rand(100);
 	printf("#####################\n");
 	printf("1.pay		   0.exit\n");
@@ -284,7 +284,10 @@ int main(void)
 			game(state, ra);
 	} while (state);
 
-	printf("已退出游戏");
+	printf("已退出游戏");*/
+
+
+	//perror("测试打印一个错误Error!\n");
 
 	return 0;
 }
