@@ -1,7 +1,23 @@
-﻿#define _CRT_SECURE_NO_WARNINGS 1
+﻿//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <time.h>
+
+
+
+void threeGame(void);
+
+int main() {
+	srand((unsigned int) time(NULL));
+
+	threeGame();
+	return 0;
+}
+
+
 
 /*
 //  枚举变量
@@ -162,17 +178,17 @@ int main()
 }
 
 */
-void game(int a, int b) {
-	if (a > b)
-		printf("太大了\n");
-	if (a < b)
-		printf("太小了\n");
-	if(a == b)
-		printf("恭喜刚刚好！\n");
-}
+//void game(int a, int b) {
+//	if (a > b)
+//		printf("太大了\n");
+//	if (a < b)
+//		printf("太小了\n");
+//	if(a == b)
+//		printf("恭喜刚刚好！\n");
+//}
 
-int main(void)
-{
+//int main(void)
+//{
 	/*
 	char password[20] = { 0 };
 	printf("%s\n", password);
@@ -289,8 +305,11 @@ int main(void)
 
 	//perror("测试打印一个错误Error!\n");
 
-	return 0;
-}
+
+	
+
+//	return 0;
+//}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
