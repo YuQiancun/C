@@ -58,3 +58,5 @@ This is my C
 	getchar()/putchar()		//获取缓冲区字符/输出字符
 	
 	
+	
+# END
